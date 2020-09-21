@@ -1,0 +1,84 @@
+
+ % Programming color don't touch without permissions.
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codeblue}{HTML}{0073e6}
+\definecolor{codegray}{rgb}{0.4,0.4,0.4}
+\definecolor{codeblac}{rgb}{0.9,0.9,0.9}
+\definecolor{commentgray}{rgb}{0.7,0.7,0.7}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{stringblue}{HTML}{0073e6}
+\definecolor{stringpurple}{HTML}{ff99ff}
+\definecolor{stringgray}{rgb}{0.6,0.6,0.6}
+\definecolor{backcolour}{rgb}{1,1,1}
+\definecolor{graybackcolour}{rgb}{0.8,0.8,0.8}
+
+\lstdefinestyle{bashStyle}{
+    backgroundcolor=\color{graybackcolour},
+    commentstyle=\color{commentgray},
+    keywordstyle=\color{codeblue},
+    numberstyle=\tiny\color{stringblue},
+    stringstyle=\color{codegreen},
+    basicstyle=\normalsize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=4pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4
+}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{textStyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    %basicstyle=\footnotesize,
+    basicstyle=\tiny,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=4pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4
+}
+
+\definecolor{bginstructions}{HTML}{e6f7ff}
+
+\lstdefinestyle{instructStyle}{
+    backgroundcolor=\color{bginstructions},
+    numberstyle=\tiny\color{codegray},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=4pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4
+}
+
+
+
+%\lstset{style=mystyle}
+\lstdefinestyle{bash} {language=bash,style=bashStyle}
+\lstdefinestyle{gcc} {language=c,style=bashStyle}
+\lstdefinestyle{text} {style=textStyle, frame=lines}
+\lstdefinestyle{instruct} {style=instructStyle, frame=lines, numbers=none}
+
+

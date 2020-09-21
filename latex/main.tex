@@ -1,0 +1,38 @@
+\input{preamble.tex}
+\input{lstdefine.tex}
+
+\title{Linux as OS skeleton dirver}
+\author{Magnus Sörensen}
+\date{January 2018}
+
+\begin{document}
+\maketitle
+\colorlet{lcfree}{Green3}
+\colorlet{lcnorm}{Blue3}
+\colorlet{lccong}{Red3}
+% -------------------------------------------------
+% Set up a new layer for the debugging marks, and make sure it is on
+% top
+\pgfdeclarelayer{marx}
+\pgfsetlayers{main,marx}
+% A macro for marking coordinates (specific to the coordinate naming
+% scheme used here). Swap the following 2 definitions to deactivate
+% marks.
+\providecommand{\cmark}[2][]{%
+  \begin{pgfonlayer}{marx}
+    \node[nmark] at (c#2#1) {#2};
+  \end{pgfonlayer}{marx}
+  }
+\providecommand{\cmark}[2][]{\relax}
+%Introduction, Methods, Results, and Discussion
+% \begin{abstract}
+%     we did stuff and it worked;
+% \end{abstract}
+% ------------------- From here to ------------------------------
+
+
+% ------------------ Here add inputs -----------------------------
+%\bibliographystyle{acm}
+%\bibliography{main.bib}
+\end{document}
+

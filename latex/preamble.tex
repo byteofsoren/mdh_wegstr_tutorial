@@ -1,0 +1,115 @@
+% ------------- START SETTINGS -------------------------------
+\documentclass[conference]{IEEEtran}
+%\documentclass[11pt,twoside,a4paper]{article}
+\usepackage{blindtext, graphicx}
+
+%\ifCLASSINFOpdf
+%\else
+%\fi
+
+% A couple of useful packages
+\usepackage[table]{xcolor}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{mdwmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{multirow}
+\usepackage[margin=0.9in]{geometry}
+%\usepackage[noend]{algpseudocode}
+
+
+%\addbibresource{biblatex-ela427.bib}
+% Added suport for bibtext files.
+% \usepackage[backend=biber, sorting=none]{biblatex}
+% --- packages for drawing diagrams----
+\usepackage{tikz}
+% \usetikzlibrary{arrows,automata}
+\usetikzlibrary{shapes,arrows,chains}
+
+
+% Package that forces figures to stay within the section.
+\usepackage[section]{placeins}
+
+%package for utf-8 support
+\usepackage[utf8]{inputenc}
+
+% added support for bloc quotes
+\usepackage{csquotes}
+
+%colour
+\usepackage{color}
+%\graphicspath{ {images/}{mesurment/data} }
+
+
+% New over line for inverse logic
+%\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+%\setcounter{secnumdepth}{3}
+
+% -- Panda lines needed for DataFrame to latex ---
+%\newcommand{\toprule}{\hline}
+%\newcommand{\midrule}{\hline}
+%\newcommand{\bottomrule}{\hline}
+\usepackage[pages=some,scale=1,angle=0,opacity=0.7]{background}
+\newcommand\BackImage[2][scale=1]{%
+%\BgThispage
+\backgroundsetup{
+  contents={\includegraphics[#1]{#2}}
+  }
+}
+
+% Renew the indexingsystem for sections, subsections, and subsubsections so that arabic numberalsare used - Added by Ulrik
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\def\thesectiondis{\thesection.} \def\thesubsectiondis{\thesectiondis\arabic{subsection}.} \def\thesubsubsectiondis{\thesubsectiondis\arabic{subsubsection}.} \def\theparagraphdis{\thesubsubsectiondis\arabic{paragraph}.}
+
+% Among other things, allows for items to be bold - Added by Ulrik
+\usepackage{enumitem}
+
+%\usepackage{cite}
+% Imported ragged for justefiing text in the \who statement
+\usepackage{ragged2e}
+% cite.sty was written by Donald Arseneau
+%\usepackage{lipsum}
+\usepackage{tabularx,ragged2e,booktabs}
+\newcolumntype{C}[1]{>{\Centering}m{#1}}
+\renewcommand\tabularxcolumn[1]{C{#1}}
+% \usepackage{multirow}
+%\usepackage{longtable}
+% \usepackage{supertabular,booktabs}
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+\usepackage{fancyref}
+%Captions
+\usepackage{sidecap} % Side captions i.e begin{SCfigure}
+\usepackage{cprotect} % The possibility to use verbatim environment inside captions.
+%\usepackage{caption} % hypcap is true by default so [hypcap=true] is optional in \usepackage[hypcap=true]{caption}
+%\usepackage{caption}
+%\usepackage[justification=centering,font=small,labelfont=bf, hypcap=false]{caption}
+%\usepackage[justification=centering, font=small, labelfont=bf]{caption}
+%\usepackage{hyperref}
+%\usepackage{url}
+
+\setcounter{tocdepth}{1}
+
+%\captionsetup[table]{name=Table}
+%\input{lstdefine.tex}
+

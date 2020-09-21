@@ -15,6 +15,14 @@ $ ./gen.sh
 ```
 4. The result is a file named `tutorial.pdf`.
 
+# File structure of this repo.
+The structure of the repo is explained more in detail here.
+1. `README.md` is the current file you are viewing.
+2. `latex` is the directory where the tutorial lives.
+    1. `gen.tex` This is the macro file that compiles the tutorial.
+    2. `tutorial.tex` This is the head file for the tutorial where the document start.
+    3. `preamble.tex` This file tells the pdflatex system what user library's to use.
+    4. The rest of the tex files are relevant to each topic in the report.
 
 # FAQ
 In here a attempt to answer the most common questions will be made beforehand.

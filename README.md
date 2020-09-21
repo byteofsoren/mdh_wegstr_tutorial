@@ -1,5 +1,9 @@
 # Tutorial for the Wegstr and Voltera mix at MDH.
-The alible tutorial in this repository can be find in the file:
+A pre compiled tutorial can be fond on [Google drive](https://drive.google.com/file/d/1DNc1oQEYtZHavuw34UykJabp4SfllP6U/view?usp=sharing).
+However the version might be old and thus build the file your self using the instructions bellow.
+
+## Mirrors for the tutorial
+[Original](https://drive.google.com/file/d/1DNc1oQEYtZHavuw34UykJabp4SfllP6U/view?usp=sharing)
 
 # Building the file locally:
 How to build the file on your computer.

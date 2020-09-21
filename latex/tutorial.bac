@@ -1,15 +1,18 @@
 \input{preamble.tex}
 \input{lstdefine.tex}
 
-\title{Linux as OS skeleton dirver}
-\author{Magnus Sörensen}
-\date{January 2018}
+\title{MDH tutorial for Wgstr and Voltera}
+\author{
+Emanuel Bjurhager and
+Magnus Sörensen
+}
+\date{\today{}}
 
 \begin{document}
 \maketitle
-\colorlet{lcfree}{Green3}
-\colorlet{lcnorm}{Blue3}
-\colorlet{lccong}{Red3}
+% \colorlet{lcfree}{Green3}
+% \colorlet{lcnorm}{Blue3}
+% \colorlet{lccong}{Red3}
 % -------------------------------------------------
 % Set up a new layer for the debugging marks, and make sure it is on
 % top
@@ -28,7 +31,25 @@
 % \begin{abstract}
 %     we did stuff and it worked;
 % \end{abstract}
+
+\begin{figure}[ht]
+    \begin{center}
+        \includegraphics[width=7cm]{fig/wgstr.jpg}
+    \end{center}
+\end{figure}
+\newpage
+\tableofcontents
+\newpage
+
 % ------------------- From here to ------------------------------
+\input{introduction.tex}
+\input{ni.tex}
+\input{kicad.tex}
+\input{linux.tex}
+\input{windows.tex}
+\input{wgstr.tex}
+\input{voltera.tex}
+\input{final_words.tex}
 
 
 % ------------------ Here add inputs -----------------------------

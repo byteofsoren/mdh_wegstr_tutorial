@@ -1,6 +1,5 @@
-% ------------- START SETTINGS -------------------------------
-\documentclass[conference]{IEEEtran}
-%\documentclass[11pt,twoside,a4paper]{article}
+% \documentclass[conference]{IEEEtran}
+\documentclass[11pt,twoside,a4paper]{article}
 \usepackage{blindtext, graphicx}
 
 %\ifCLASSINFOpdf
@@ -12,6 +11,7 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{graphics} % for pdf, bitmapped graphics files
+% \usepackage{imakeidx}
 \usepackage{epsfig} % for postscript graphics files
 \usepackage{mathptmx} % assumes new font selection scheme installed
 \usepackage{times} % assumes new font selection scheme installed
@@ -59,15 +59,15 @@
 \usepackage[pages=some,scale=1,angle=0,opacity=0.7]{background}
 \newcommand\BackImage[2][scale=1]{%
 %\BgThispage
-\backgroundsetup{
-  contents={\includegraphics[#1]{#2}}
-  }
-}
+% \backgroundsetup{
+%   contents={\includegraphics[#1]{#2}}
+%   }
+% }
 
-% Renew the indexingsystem for sections, subsections, and subsubsections so that arabic numberalsare used - Added by Ulrik
-\renewcommand{\thesection}{\arabic{section}}
-\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\def\thesectiondis{\thesection.} \def\thesubsectiondis{\thesectiondis\arabic{subsection}.} \def\thesubsubsectiondis{\thesubsectiondis\arabic{subsubsection}.} \def\theparagraphdis{\thesubsubsectiondis\arabic{paragraph}.}
+% % Renew the indexingsystem for sections, subsections, and subsubsections so that arabic numberalsare used - Added by Ulrik
+% \renewcommand{\thesection}{\arabic{section}}
+% \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+% \def\thesectiondis{\thesection.} \def\thesubsectiondis{\thesectiondis\arabic{subsection}.} \def\thesubsubsectiondis{\thesubsectiondis\arabic{subsubsection}.} \def\theparagraphdis{\thesubsubsectiondis\arabic{paragraph}.}
 
 % Among other things, allows for items to be bold - Added by Ulrik
 \usepackage{enumitem}
@@ -79,7 +79,7 @@
 %\usepackage{lipsum}
 \usepackage{tabularx,ragged2e,booktabs}
 \newcolumntype{C}[1]{>{\Centering}m{#1}}
-\renewcommand\tabularxcolumn[1]{C{#1}}
+% \renewcommand\tabularxcolumn[1]{C{#1}}
 % \usepackage{multirow}
 %\usepackage{longtable}
 % \usepackage{supertabular,booktabs}

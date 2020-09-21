@@ -1,6 +1,17 @@
 # Tutorial for the Wegstr and Voltera mix at MDH.
 The alible tutorial in this repository can be find in the file:
 
+# Building the file locally:
+How to build the file on your computer.
+1. Install `pdflatex` on your machine.
+2. Go to the LaTeX folder `$ cd latex`
+3. Compile using the macro available in the folder:
+```bash
+$ ./gen.sh
+```
+4. The result is a file named `tutorial.pdf`.
+
+
 # FAQ
 In here a attempt to answer the most common questions will be made beforehand.
 ## How do i contribute?

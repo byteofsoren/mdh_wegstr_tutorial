@@ -1,9 +1,28 @@
 %%%%%%-%%%%%%%%%%%%%%%%%%%%
 \section{Windows}%
 \label{sec:windows}
-
-
-To remove "+" marks from Ultiboard export\\
+ \subsection{Multisim}
+ First of all, you should create a multisim file with a circuit you would like to bring to life. It is important that all components used are blue or green. Black components lack footprint and cannot be exported to Ultiboard, green components lack virtual simulation data for Multisim but does have a footprint and can therefore be exported to Ultiboard. As a rule of thumb, all components should be blue except for connectors. Remember to connect all cables. It is easy to forget about power and ground. Everything needs to be connected in multisim just like it should be in real life. You probably use some sort of connector to bring analog and digital signals to and from the circuit you are designing and of course power. All of this needs to be routed to the connector.\\
+ 
+ (Insert picture here)\\
+Once done, export the file from Multisim to Ultiboard\\
+\verb|Transfer ->Transfer to Ultiboard->Transfer to Ultiboard 14.2->Save|\\
+ 
+\subsection{Ultiboard}
+First layout your components, a wise man once said that 80\% of the PCB design work is placing the components in a good manner. With a good placement, time will be saved. A recomendation is to first lay out the components in a similar manner to how you placed them in Multisim, then try to optimize the placement one component at the time.\\
+When components placement is completed, it is time for routing. Try to only route on one side of the PCB. One sided PCBs are cheaper and easier to manufacture. Some times it is not possible to do one sided routing, only then should you use two layers. Use Vias to connect the top and bottom layer and remember to use sufficient trace width and clearence for your particular needs. When the routing is done, dubble check that everything is connected. In the bottom meny there is a tab called \verb|Statistics|, there you can see if you forgot some trace. Before exporting remove the "+" marks from Ultiboard export\\
 \verb|Options ->Global options->PCB design->Show global fiducial marks|\\
-Uncheck this box to get rid of the unnessesary marks that Ultiboard create for exports.
+Uncheck this box to get rid of the unnessesary marks that Ultiboard create for exports. This will save you some time later.
+Then export the file by
+\verb|File->Export->Gerber RS-274X|
+Uncheck the layers you dont need e.g. Silkscreen Top/Bottom.
+
+\subsection{Carbide Copper}
+Can be found at \verb|copper.carbide3d.com|.
+Upload you file and follow the steps (further explenation needed)
+
+Save the file.
+\subsection{Wegstr}
+The Wegstr software does not like the Carbide Copper files, find the file in Windows File Explorer and change the .nc extention to .txt. Then import the file to Wegstr software (Further explenation needed)
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%

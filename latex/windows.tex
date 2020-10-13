@@ -2,26 +2,34 @@
 \section{Windows}%
 \label{sec:windows}
  \subsection{Multisim}
- First of all, you should create a multisim file with a circuit you would like to bring to life. It is important that all components used are blue or green. Black components lack footprint and cannot be exported to Ultiboard, green components lack virtual simulation data for Multisim but does have a footprint and can therefore be exported to Ultiboard. As a rule of thumb, all components should be blue except for connectors. Remember to connect all cables. It is easy to forget about power and ground. Everything needs to be connected in multisim just like it should be in real life. You probably use some sort of connector to bring analog and digital signals to and from the circuit you are designing and of course power. All of this needs to be routed to the connector.\\
+ First of all, you should create a Multisim file with a circuit you would like to bring to life. It is important that all components used are blue or green. Black components lack footprint and cannot be exported to Ultiboard, green components lack virtual simulation data for Multisim but does have a footprint and can therefore be exported to Ultiboard. As a rule of thumb, all components should be blue except for connectors. Remember to connect all cables. It is easy to forget about power and ground. Everything needs to be connected in Multisim just like it should be in real life. You probably use some sort of connector to bring analog and digital signals to and from the circuit you are designing and of course power. All of this needs to be routed to the connector.\\
  
  (Insert picture here)\\
 Once done, export the file from Multisim to Ultiboard\\
 \verb|Transfer ->Transfer to Ultiboard->Transfer to Ultiboard 14.2->Save|\\
  
 \subsection{Ultiboard}
-First layout your components, a wise man once said that 80\% of the PCB design work is placing the components in a good manner. With a good placement, time will be saved. A recomendation is to first lay out the components in a similar manner to how you placed them in Multisim, then try to optimize the placement one component at the time.\\
-When components placement is completed, it is time for routing. Try to only route on one side of the PCB. One sided PCBs are cheaper and easier to manufacture. Some times it is not possible to do one sided routing, only then should you use two layers. Use Vias to connect the top and bottom layer and remember to use sufficient trace width and clearence for your particular needs. When the routing is done, dubble check that everything is connected. In the bottom meny there is a tab called \verb|Statistics|, there you can see if you forgot some trace. Before exporting remove the "+" marks from Ultiboard export\\
+First layout your components, a wise man once said that 80\% of the PCB design work is placing the components in a good manner. With a good placement, time will be saved. A recommendation is to first lay out the components in a similar manner to how you placed them in Multisim, then try to optimize the placement one component at the time.\\
+When components placement is completed, it is time for routing. Try to only route on one side of the PCB. One sided PCBs are cheaper and easier to manufacture. Some times it is not possible to do one sided routing, only then should you use two layers. Use Vias to connect the top and bottom layer and remember to use sufficient trace width and clearance for your particular needs. When the routing is done, double check that everything is connected. In the bottom menu there is a tab called \verb|Statistics|, there you can see if you forgot some trace. Before exporting remove the "+" marks from Ultiboard export\\
 \verb|Options ->Global options->PCB design->Show global fiducial marks|\\
-Uncheck this box to get rid of the unnessesary marks that Ultiboard create for exports. This will save you some time later.
+Uncheck this box to get rid of the unnecessary marks that Ultiboard create for exports. This will save you some time later.
 Then export the file by
 \verb|File->Export->Gerber RS-274X|
-Uncheck the layers you dont need e.g. Silkscreen Top/Bottom.
+Uncheck the layers you don't need e.g. Silkscreen Top/Bottom.
 
-\subsection{Carbide Copper}
+\subsection{Gerber to Gcode}
+Ultiboard will generate Gerber files. Gerber files are the de facto standard in PCB manufacturing industry to describe the layout of the PCB. However, CNC routers such as the Wegstr does only understand Gcode. That is a file containing X, Y and Z coordinates and speed for how to move and position the mill-bit of the machine. We therefore need to convert the Gerber files to Gcode files. There are two pieces of software that are free and commonly used by MDH students. Carbide Copper and FlatCam. Carbide copper is an online tool that is very basic and straight forward to use, but is far from perfect and as of now (2020-10-XX) are having problems with power planes and very wide cuts. FlatCam have somewhat steeper learning curve but will produce better result, support dual layer PCBs and optimized Gcode that will take shorter time to complete the same PCB.
+\subsubsection{Carbide Copper}
 Can be found at \verb|copper.carbide3d.com|.
 Upload you file and follow the steps (further explenation needed)
 
 Save the file.
+\subsubsection{FlatCam}
+Single sided PCB (watch this first):\\ \verb|https://www.youtube.com/watch?v=--Cb11heuHc|\\
+Dual sided PCB (only if you need to):\\
+\verb|https://www.youtube.com/watch?v=8cGf6NvubFk|\\
+IMPORTANT! Do not use feed rate speeds in X-Y plane over 80 and less than 60 for Z. Smaller bits generally require even lower speeds. Too high speed will cause bad, uneven results and or break the tool. The default Z cut depth is around -2mm, change this. For isolation routing, -0.1 to -0.15 mm is enough.
+
 \subsection{Wegstr}
 The Wegstr software does not like the Carbide Copper files, find the file in Windows File Explorer and change the .nc extention to .txt. Then import the file to Wegstr software (Further explenation needed)
 
